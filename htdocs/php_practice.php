@@ -152,14 +152,14 @@
 
 // echo is_numeric($a);
 
-$a = "John"; //String
-$b = 5; // Integer
-$c = 3.14; //float
-$d = true; //boolean
-$e = [1,2,3]; //array
-$f = new stdClass(); //object
-$g = null; //null
-$h = fopen("php_practice.php", "r"); //resource
+// $a = "John"; //String
+// $b = 5; // Integer
+// $c = 3.14; //float
+// $d = true; //boolean
+// $e = [1,2,3]; //array
+// $f = new stdClass(); //object
+// $g = null; //null
+// $h = fopen("php_practice.php", "r"); //resource
 
 // ccasting - string 
 // $a = (string) $a;
@@ -213,22 +213,160 @@ $h = fopen("php_practice.php", "r"); //resource
 
 
 
-var_dump($a);
-echo "<br>";
-var_dump($b);
-echo "<br>";
-var_dump($c);
-echo "<br>";
-var_dump($d);
-echo "<br>";
-var_dump($e);
-echo "<br>";
-var_dump($f);
-echo "<br>";
-var_dump($g);
-echo "<br>";
-var_dump($h);
-echo "<br>";
+// var_dump($a);
+// echo "<br>";
+// var_dump($b);
+// echo "<br>";
+// var_dump($c);
+// echo "<br>";
+// var_dump($d);
+// echo "<br>";
+// var_dump($e);
+// echo "<br>";
+// var_dump($f);
+// echo "<br>";
+// var_dump($g);
+// echo "<br>";
+// var_dump($h);
+// echo "<br>";
+
+
+
+// php math
+// $pi = pi();
+// echo $pi, "<br>";
+
+// $minNumber = min(300, 80, 4, 98, 3);
+// $maxNumber = max(300, 80, 4, 98, 3);
+
+
+// echo $minNumber, "<br>";
+// echo $maxNumber, "<br>";
+
+// $num = -5;
+// echo abs($num), "<br>";;
+
+// $sqrt = sqrt(9);
+// echo $sqrt, "<br>";
+
+// $rounded = round(3.49);
+// echo $rounded, "<br>";
+
+// echo rand(), "<br>";
+
+// echo rand(5,30), "<br>";
+
+ //php constant
+//   define("_no1","hello",);
+//   define("_no2",25,);
+//   define("_no3",[1,2,3],);
+//   echo _no1, "<br>";
+//   echo _no2, "<br>";
+//  //echo _no3,"<br>";
+
+//   function test(){
+   
+//     echo _no1;
+//   }
+ 
+// test();
+ 
+//php operators
+//arik
+  //sum
+// echo 6 + 4 + 5, "<br>";
+//   //sub
+// echo 6 - 5 - 10,"<br>";
+// echo 6 - 2 + 10,"<br>"; //PEMDAS
+// //multi
+// echo 6 * 6 * 6,"<br>";
+// //div
+// echo 10 / 5,"<br>";
+// echo 6 + 6 * 2 / 2,"<br>"; //PEMDAS
+// // mod
+// echo 5 % 2,"<br>";
+// //expon **
+// echo 4 ** 2,"<br>";
+
+//assignment
+// $x = 5;
+// +=
+//-=
+//*=
+// /=
+// %=
+//$x = $sx + 10;
+// $x += 10;
+// echo $x
+
+//comparison
+// ==
+// var_dump(6 == "6");
+// echo "<br>";
+// // ===
+// var_dump(6 === "6");
+// echo "<br>";
+// // !=
+// var_dump(100 != 99);
+// echo "<br>";
+// // !==
+// var_dump(100 !== 99);
+// echo "<br>";
+// // >
+// // >=
+// //<=
+// var_dump(10 > 4);
+// echo "<br>";
+// var_dump(10 >= 4);
+// echo "<br>";
+// var_dump(10 <= 4);
+// echo "<br>";
+// // <=>
+// echo 10 <=>5;
+
+// //increment
+// $x = 5;
+// $y = 5;
+// //pre-incre
+// echo ++$x,"<br>";
+// //post-incre
+// echo $y++,"<br>";
+// echo $y,"<br>";
+
+//logical
+// and &&
+// var_dump(true and true);// true
+// echo "<br>";
+// var_dump(true and false);// false
+// echo "<br>";
+// var_dump(6 == "6" and 6 > 9); // fasle
+// echo "<br>";
+
+// // or ||
+// var_dump(false or false);// true
+// echo "<br>";
+// var_dump(6 == "6" || 6 > 9); // true
+// echo "<br>";
+
+// // xor
+// var_dump(true xor false); //true
+// echo "<br>";
+// var_dump(6 == "6" xor 6 > 9); // true
+// echo "<br>";
+
+// // !
+// var_dump(!true);
+// echo "<br>";
+
+// var_dump(!(6 == "6" xor 6 > 9)); // true
+// echo "<br>";
+
+echo "Hello ". "World!"
+$x = "Hello";
+$x = $x . "world";
+$x . = "World"
+
+echo $x;
 
 ?>
 
