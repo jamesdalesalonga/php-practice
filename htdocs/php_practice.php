@@ -13,26 +13,25 @@
 </script> -->
 
 <?php
-   //echo "Hello World!";
-   #echo "Hello World!";
+//    //echo "Hello World!";
+//    #echo "Hello World!";
 
 
-    /*echo "Hello World!";
-      echo "Hello World!";
-    */
-?>
+//     /*echo "Hello World!";
+//       echo "Hello World!";
+//     */
+// ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+ <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <meta charset="UTF-8">     <meta name="viewport" content="width=, initial-scale=1.0">
+     <title>Document</title>
+ </head>
 <body>
-<!-- <h1>This is my first PHP page</h1> -->
-<?php 
+ <!-- <h1>This is my first PHP page</h1> -->
+ <?php 
 // echo "Hello World!";
 
 // variable
@@ -47,7 +46,7 @@
 //    var_dump(null);
 
 
-//variable scope
+// variable scope
 
 // $a = 5;
 // //echo $a;
@@ -66,9 +65,9 @@
 //  test(); //7
 
 
-//echo $a;
+// echo $a;
    
-//echo & print
+// echo & print
 
 // echo ("Hello! <br>"), ("World! <br>");
 // echo "Hello! <br>", "World! <br>";
@@ -106,7 +105,7 @@
 // strings
 // $a = "blue";
 // $name = "<h1 style='color:$a'>John Doe";
-// 
+
 
 //  $name = "John Doe";
 
@@ -201,7 +200,7 @@
 // $g = (bool) $g;
 // $h = (bool) $h;
 
-//casting-array
+// casting-array
 // $a = (array) $a;
 // $b = (array) $b;
 // $c = (array) $c;
@@ -256,7 +255,7 @@
 
 // echo rand(5,30), "<br>";
 
- //php constant
+//  php constant
 //   define("_no1","hello",);
 //   define("_no2",25,);
 //   define("_no3",[1,2,3],);
@@ -271,9 +270,9 @@
  
 // test();
  
-//php operators
-//arik
-  //sum
+// php operators
+// arik
+//   sum
 // echo 6 + 4 + 5, "<br>";
 //   //sub
 // echo 6 - 5 - 10,"<br>";
@@ -288,18 +287,18 @@
 // //expon **
 // echo 4 ** 2,"<br>";
 
-//assignment
+// assignment
 // $x = 5;
 // +=
-//-=
-//*=
+// -=
+// *=
 // /=
 // %=
-//$x = $sx + 10;
+// $x = $sx + 10;
 // $x += 10;
 // echo $x
 
-//comparison
+// comparison
 // ==
 // var_dump(6 == "6");
 // echo "<br>";
@@ -333,7 +332,7 @@
 // echo $y++,"<br>";
 // echo $y,"<br>";
 
-//logical
+// logical
 // and &&
 // var_dump(true and true);// true
 // echo "<br>";
@@ -361,14 +360,100 @@
 // var_dump(!(6 == "6" xor 6 > 9)); // true
 // echo "<br>";
 
-echo "Hello ". "World!"
-$x = "Hello";
-$x = $x . "world";
-$x . = "World"
+// echo "Hello " . "World!<br>";
 
-echo $x;
+// $x = "Hello";
+// $x = $x . " world";  
+// $x .= " World";      
+
+// echo $x;
+
+//ternary
+// $color = 5 > 10 ? "More": "Less";
+// echo $color;
+
+//null coalescing
+// $age = $student ?? 20;
+// echo $age;
+
+// loopong statement
+// while
+// do while
+// for
+// for each -> arrays
+
+//  $students = array(
+//      array("name"=>"Mary","age"=>17,"gender"=>"Female"),
+//      array("name"=>"Joy","age"=>21,"gender"=>"Female"),
+//      array("name"=>"Ben","age"=>30,"gender"=>"Male"),
+//  );
+ 
+
+//  foreach($students as $student){
+//    foreach($student as $value){
+//     echo $value;
+//    }
+//  }
+
 
 ?>
+
+
+<!-- <h1>Students</h1>
+<ul>
+    <?php foreach($students as $student){ ?>
+        <li>My name <?php echo $student['name'] ?> is age <?php echo $student['age'] ?> is and i am <?php echo $student['gender'] ?></li>
+    <?php } ?>
+</ul> -->
+
+
+
+
+
+  <?php 
+            $username = "";
+
+            $error_messages = [];
+
+            if(isset($_REQUEST['btnSubmit'])){
+                $username = $_REQUEST['username'];
+                
+                if($_REQUEST['username'] == ""){
+                    array_push($error_messages, "Username is required!");
+                }
+
+                if($_REQUEST['password'] == ""){
+                    array_push($error_messages, "Password is required!");
+                }
+            }
+        ?>
+
+        <!-- get send data thru url -->
+        <!-- post send data thru http request -->
+        <?php 
+            if(!empty($error_messages)){
+                foreach($error_messages as $error){
+                    echo $error ."<br>";
+                }
+            }     
+        ?>
+        <form action="php_practice.php" method="get">
+            <label for="">Username:</label>
+            <input type="text" name="username" value="<?php echo $username; ?>">
+            <br>    
+            <label for="">Password:</label>
+            <input type="password" name="password">
+            <br>
+            <input type="submit" value="Login" name="btnSubmit">
+        </form>
+
+        <!-- <?php 
+        if(isset($_GET['username']) and isset($_GET['password'])){
+                echo "Username: " . $_GET['username'], "<br>";
+                echo "Password: " . $_GET['password'];
+            }
+        ?> -->
+
 
 </body>
 </html>
